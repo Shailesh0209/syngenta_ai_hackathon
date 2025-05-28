@@ -1,0 +1,416 @@
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #18582b;
+  color: white;
+}
+
+.dashboard-header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+}
+
+.user-info p {
+  margin-right: 15px;
+}
+
+.logout-button {
+  background-color: #c93a3a;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.dashboard-content {
+  display: flex;
+  height: calc(100vh - 60px);
+}
+
+/* Sidebar styles */
+.sidebar {
+  width: 250px;
+  background-color: #f0f0f0;
+  padding: 15px;
+  overflow-y: auto;
+  transition: width 0.3s;
+}
+
+.sidebar.collapsed {
+  width: 50px;
+  overflow: hidden;
+}
+
+.toggle-sidebar {
+  background-color: #ddd;
+  border: none;
+  padding: 8px;
+  margin-bottom: 15px;
+  width: 100%;
+  text-align: center;
+  cursor: pointer;
+}
+
+.sidebar-section {
+  margin-bottom: 20px;
+}
+
+.sidebar-section h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #444;
+}
+
+.sidebar-section ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-section li {
+  padding: 5px 0;
+  font-size: 13px;
+  cursor: pointer;
+  color: #18582b;
+}
+
+.sidebar-section li:hover {
+  text-decoration: underline;
+}
+
+/* Main content styles */
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  overflow: hidden;
+}
+
+/* Chat interface styles */
+.chat-interface {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.chat-messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.message {
+  margin-bottom: 15px;
+  padding: 10px 15px;
+  border-radius: 8px;
+  max-width: 80%;
+  background-color: white;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.user-message {
+  background-color: #d1e7dd;
+  margin-left: auto;
+}
+
+.error-message {
+  background-color: #f8d7da;
+}
+
+.message-content p {
+  margin: 0;
+}
+
+.document-link {
+  margin-top: 8px;
+}
+
+.document-link a {
+  color: #18582b;
+  text-decoration: none;
+}
+
+.document-link a:hover {
+  text-decoration: underline;
+}
+
+.loading-indicator {
+  display: flex;
+  justify-content: center;
+}
+
+.loading-dot {
+  width: 8px;
+  height: 8px;
+  margin: 0 4px;
+  background-color: #18582b;
+  border-radius: 50%;
+  animation: loading 1s infinite alternate;
+}
+
+.loading-dot:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.loading-dot:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes loading {
+  0% {
+    opacity: 0.3;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(-5px);
+  }
+}
+
+.chat-input-container {
+  padding-top: 10px;
+}
+
+.chat-form {
+  display: flex;
+  gap: 10px;
+}
+
+.chat-input {
+  flex: 1;
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.send-button, .clear-button {
+  padding: 10px 20px;
+  background-color: #18582b;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.clear-button {
+  background-color: #6c757d;
+}
+
+/* Formatted message styles */
+.formatted-message {
+  width: 100%;
+}
+
+.result-table-section {
+  background-color: #f8f9fa;
+  border-radius: 6px;
+  padding: 10px;
+  margin-bottom: 15px;
+  overflow-x: auto;
+}
+
+.result-table-section pre {
+  margin: 0;
+  white-space: pre-wrap;
+  font-family: monospace;
+}
+
+.explanation-section {
+  margin-bottom: 15px;
+}
+
+.explanation-section h4 {
+  margin-top: 0;
+  margin-bottom: 8px;
+  color: #2c3e50;
+}
+
+.sql-query-section {
+  margin-bottom: 15px;
+}
+
+.sql-query-section details {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 8px;
+}
+
+.sql-query-section summary {
+  cursor: pointer;
+  font-weight: bold;
+  color: #4a6fa5;
+}
+
+.sql-query-section pre {
+  margin-top: 8px;
+  padding: 10px;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+  overflow-x: auto;
+}
+
+.access-log-section {
+  font-size: 0.9em;
+  color: #6c757d;
+  margin-bottom: 15px;
+}
+
+.suggestions-section {
+  margin-bottom: 15px;
+}
+
+.suggestions-section h4 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: #2c3e50;
+}
+
+.suggestion-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.suggestion-button {
+  background-color: #e9f2fe;
+  border: 1px solid #cce5ff;
+  color: #0069d9;
+  border-radius: 16px;
+  padding: 6px 12px;
+  font-size: 0.9em;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.suggestion-button:hover {
+  background-color: #d4e5ff;
+  border-color: #b8daff;
+}
+
+.metadata-section {
+  font-size: 0.9em;
+  color: #6c757d;
+  padding: 5px 10px;
+  background-color: #f8f9fa;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+.prediction-results-section {
+  margin-top: 15px;
+  padding: 10px;
+  background-color: #eef7ff; /* Light blue background */
+  border: 1px solid #cce5ff;
+  border-radius: 6px;
+}
+
+.prediction-results-section h4 {
+  margin-top: 0;
+  margin-bottom: 8px;
+  color: #004085; /* Darker blue for heading */
+}
+
+.prediction-results-section p {
+  margin: 0;
+  white-space: pre-wrap; /* Preserve formatting if any */
+}
+
+/* Chart styles */
+.chart-container {
+  margin: 20px 0;
+  width: 100%;
+}
+
+.chart-container h4 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  text-align: center;
+  color: #2c3e50;
+}
+
+.chart-visualization {
+  display: flex;
+  height: 250px;
+  position: relative;
+}
+
+.chart-placeholder {
+  width: 100%;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 20px;
+  display: flex;
+  position: relative;
+}
+
+.chart-type-bar {
+  display: flex;
+  align-items: flex-end;
+  height: 200px;
+  width: 100%;
+  gap: 8px;
+}
+
+.chart-bar-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  height: 100%; /* Make container take full height of chart-type-bar */
+  justify-content: flex-end; /* Added in previous step, ensure it's here */
+}
+
+.chart-bar {
+  width: 100%;
+  /* background-color is set by inline style */
+  transition: height 0.5s;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  flex-grow: 0;    /* Explicitly prevent growing */
+  flex-shrink: 0;  /* Explicitly prevent shrinking */
+  /* height is set via inline style, which acts as flex-basis here */
+}
+
+.chart-label {
+  margin-top: 5px;
+  font-size: 0.8em;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
+.chart-y-axis {
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-right: 10px;
+}
+
+.chart-y-axis div {
+  transform: rotate(-90deg);
+  white-space: nowrap;
+  font-size: 0.8em;
+  color: #666;
+}
