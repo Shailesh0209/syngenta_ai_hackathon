@@ -55,7 +55,7 @@ pytz==2025.2
 PyYAML==6.0.2
 redis==5.0.8
 regex==2024.11.6
-requests==2.32.3
+requests==2.32.4
 safetensors==0.5.3
 scikit-learn==1.6.1
 scipy==1.15.3
